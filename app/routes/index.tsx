@@ -11,7 +11,7 @@ export default function Index() {
 
   const [time, setTime] = useState(60);
   useInterval(() => {
-    if (time >= 0) {
+    if (time >= 0 && amount > 0) {
       setTime((time) => time - 1);
     }
   }, 1000);
