@@ -33,7 +33,10 @@ export default function Index() {
               <button
                 type="button"
                 className={linkStyles}
-                onClick={() => window.location.reload()}
+                onClick={() => {
+                  setStep("DEFAULT");
+                  return setTime(60);
+                }}
               >
                 Reset
               </button>
