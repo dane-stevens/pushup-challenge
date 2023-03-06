@@ -95,9 +95,9 @@ export default function Index() {
                 method="get"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  setStep("REST");
-                  audioRef321.current.play();
-                  return audioRef321.current.pause();
+                  return setStep("REST");
+                  // audioRef321.current.play();
+                  // return audioRef321.current.pause();
                 }}
               >
                 <div className="my-8">
