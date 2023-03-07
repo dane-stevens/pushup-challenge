@@ -4,13 +4,15 @@ import { useInterval } from "~/hooks/interval";
 
 const linkStyles = `rounded bg-blue-300 px-4 py-2 text-slate-900 hover:bg-blue-400 mt-8 inline-block`;
 
+const TIMER = 120;
+
 export default function Index() {
   const [step, setStep] = useState("DEFAULT");
   const [amount, setAmount] = useState(0);
   const audioRef321 = useRef(null);
   const audioRefCheer = useRef(null);
 
-  const [time, setTime] = useState(60);
+  const [time, setTime] = useState(TIMER);
   useInterval(() => {
     if (time >= 0 && step === "REST") {
       setTime((time) => time - 1);
@@ -35,7 +37,7 @@ export default function Index() {
                 className={linkStyles}
                 onClick={() => {
                   setStep("DEFAULT");
-                  return setTime(60);
+                  return setTime(TIMER);
                 }}
               >
                 Reset
